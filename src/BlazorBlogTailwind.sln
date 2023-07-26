@@ -5,6 +5,7 @@ VisualStudioVersion = 17.7.33906.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Solution Files", "0. Solution Files", "{60EFD135-E6B3-4C59-AE63-AC8091E3BD83}"
 	ProjectSection(SolutionItems) = preProject
+		..\.editorconfig = ..\.editorconfig
 		..\.gitattributes = ..\.gitattributes
 		..\.gitignore = ..\.gitignore
 		..\CODE_OF_CONDUCT.md = ..\CODE_OF_CONDUCT.md
@@ -21,7 +22,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBlog.Common", "Blazor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBlog.Server", "BlazorBlog.Server\BlazorBlog.Server.csproj", "{A38BE151-1D3D-4663-B8AC-413A39CE7995}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorBlog.Web", "BlazorBlog.Web\BlazorBlog.Web.csproj", "{70DE3077-D902-43D2-8084-2A7C4D2686B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBlog.Web", "BlazorBlog.Web\BlazorBlog.Web.csproj", "{0867270C-A23C-4706-8F87-60870F36C021}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorBlog.Web.Playwright.Tests", "BlazorBlog.Web.Playright.Tests\BlazorBlog.Web.Playwright.Tests.csproj", "{3DC1D0CD-AA45-47A1-AF55-51787C04C67D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +40,14 @@ Global
 		{A38BE151-1D3D-4663-B8AC-413A39CE7995}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A38BE151-1D3D-4663-B8AC-413A39CE7995}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A38BE151-1D3D-4663-B8AC-413A39CE7995}.Release|Any CPU.Build.0 = Release|Any CPU
-		{70DE3077-D902-43D2-8084-2A7C4D2686B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70DE3077-D902-43D2-8084-2A7C4D2686B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70DE3077-D902-43D2-8084-2A7C4D2686B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70DE3077-D902-43D2-8084-2A7C4D2686B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0867270C-A23C-4706-8F87-60870F36C021}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0867270C-A23C-4706-8F87-60870F36C021}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0867270C-A23C-4706-8F87-60870F36C021}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0867270C-A23C-4706-8F87-60870F36C021}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC1D0CD-AA45-47A1-AF55-51787C04C67D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC1D0CD-AA45-47A1-AF55-51787C04C67D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC1D0CD-AA45-47A1-AF55-51787C04C67D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC1D0CD-AA45-47A1-AF55-51787C04C67D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,7 +55,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{48EA9088-9A9A-4522-A1D7-146E21261D9A} = {057E29ED-323B-41FE-9E98-BC8BA28E9FB9}
 		{A38BE151-1D3D-4663-B8AC-413A39CE7995} = {057E29ED-323B-41FE-9E98-BC8BA28E9FB9}
-		{70DE3077-D902-43D2-8084-2A7C4D2686B4} = {057E29ED-323B-41FE-9E98-BC8BA28E9FB9}
+		{0867270C-A23C-4706-8F87-60870F36C021} = {057E29ED-323B-41FE-9E98-BC8BA28E9FB9}
+		{3DC1D0CD-AA45-47A1-AF55-51787C04C67D} = {BD6496CF-02C8-4201-98CF-720B38E6F7AD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3641D273-856F-4EE6-AC63-1DD6B953F318}

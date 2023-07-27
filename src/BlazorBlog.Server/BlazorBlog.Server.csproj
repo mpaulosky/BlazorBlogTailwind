@@ -13,7 +13,6 @@
 	<ItemGroup>
 		<ProjectReference Include="..\BlazorBlog.Common\BlazorBlog.Common.csproj" />
 		<ProjectReference Include="..\BlazorBlog.Web\BlazorBlog.Web.csproj" />
-		<ProjectReference Include="..\BlazorWithTailwind\BlazorBlog.Web.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

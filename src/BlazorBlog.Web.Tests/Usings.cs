@@ -1,5 +1,10 @@
 global using System.Collections.Concurrent;
 global using System.Diagnostics.CodeAnalysis;
+global using System.Runtime.CompilerServices;
+
+global using BlazorBlog.Web.Tests.Utilities;
+
+global using FluentAssertions;
 
 global using Microsoft.AspNetCore.Hosting;
 global using Microsoft.AspNetCore.Hosting.Server;

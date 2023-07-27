@@ -24,7 +24,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBlog.Server", "Blazor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBlog.Web", "BlazorBlog.Web\BlazorBlog.Web.csproj", "{0867270C-A23C-4706-8F87-60870F36C021}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorBlog.Web.Playwright.Tests", "BlazorBlog.Web.Playright.Tests\BlazorBlog.Web.Playwright.Tests.csproj", "{3DC1D0CD-AA45-47A1-AF55-51787C04C67D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBlog.Web.Tests", "BlazorBlog.Web.Tests\BlazorBlog.Web.Tests.csproj", "{3DC1D0CD-AA45-47A1-AF55-51787C04C67D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

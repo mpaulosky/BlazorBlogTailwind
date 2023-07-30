@@ -1,3 +1,12 @@
+// ============================================
+// Copyright (c) 2023. All rights reserved.
+// File Name :     Program.cs
+// Company :       mpaulosky
+// Author :        Matthew Paulosky
+// Solution Name : BlazorBlogTailwind
+// Project Name :  BlazorBlog.Server
+// =============================================
+
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();

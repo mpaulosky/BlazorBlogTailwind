@@ -31,14 +31,14 @@ jobs:
       run: dotnet build --no-restore
     - name: Unit Test
       run: dotnet test --no-build --verbosity normal
-      working-directory: ./src/UnitTests/**/*.csproj
+      working-directory: ./UnitTests/**/*.csproj
 
   playwright:
     name: 'Playwright Tests'
     runs-on: ubuntu-latest 
     defaults:
       run:
-        working-directory: ./src/WebTests/**/*.csproj
+        working-directory: ./WebTests/**/*.csproj
     container:
       image: mcr.microsoft.com/playwright/dotnet:v1.35.0-jammy
     steps:

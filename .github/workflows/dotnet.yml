@@ -9,7 +9,6 @@ on:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
-    branches: [	"main" ]
 
 
 jobs:
@@ -31,7 +30,7 @@ jobs:
       run: dotnet build --no-restore
     - name: Unit Test
       run: dotnet test --no-build --verbosity normal
-      working-directory: UnitTests
+      working-directory: .src/UnitTests
 
   playwright:
     name: 'Playwright Tests'
@@ -50,4 +49,4 @@ jobs:
       - run: dotnet build
       - name: Execute Playwright tests
         run: dotnet test --no-build
-        working-directory: WebTests
+        working-directory: .src/WebTests

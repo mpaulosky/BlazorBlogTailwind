@@ -29,9 +29,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Unit Test
-      run: dotnet test --no-build --verbosity normal
-      paths-ignore: 
-      - 'WebTests'
+      run: dotnet test --no-build --verbosity normal --filter Category=Unit
 
   playwright:
     name: 'Playwright Tests'
@@ -50,4 +48,3 @@ jobs:
       - run: dotnet build
       - name: Execute Playwright tests
         run: dotnet test --no-build
-        working-directory: .src/WebTests

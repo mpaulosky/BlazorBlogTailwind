@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Solution Files", "0. Sol
 		..\CONTRIBUTING.md = ..\CONTRIBUTING.md
 		..\LICENSE.txt = ..\LICENSE.txt
 		..\README.md = ..\README.md
+		..\runsettings.xml = ..\runsettings.xml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Source", "1. Source", "{057E29ED-323B-41FE-9E98-BC8BA28E9FB9}"
@@ -32,7 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBlog.Web.UnitTests", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBlog.Web.WebTests", "WebTests\BlazorBlog.Web.Tests\BlazorBlog.Web.WebTests.csproj", "{1B54C03F-0EEC-475D-A2F6-87B097848D33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorBlog.Web.BUnitTests", "UnitTests\BlazorBlog.Web.BUnitTests\BlazorBlog.Web.BUnitTests.csproj", "{11E31499-0B7C-433B-80F9-3400470D353D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBlog.Web.BUnitTests", "UnitTests\BlazorBlog.Web.BUnitTests\BlazorBlog.Web.BUnitTests.csproj", "{11E31499-0B7C-433B-80F9-3400470D353D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

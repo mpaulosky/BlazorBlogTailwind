@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest 
     defaults:
       run:
-        working-directory: ./src/WebTests/BlazorBlog.Web.WebTests
+        working-directory: ./src
     container:
       image: mcr.microsoft.com/playwright/dotnet:v1.35.0-jammy
     steps:

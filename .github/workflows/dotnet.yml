@@ -30,6 +30,8 @@ jobs:
       run: dotnet build --no-restore
     - name: Unit Test
       run: dotnet test --no-build --verbosity normal
+      paths-ignore: 
+      - 'WebTests'
 
   playwright:
     name: 'Playwright Tests'

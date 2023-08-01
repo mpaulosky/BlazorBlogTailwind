@@ -7,3 +7,4 @@
 // Project Name :  BlazorBlog.Server.UnitTests
 // =============================================
 
+global using Xunit;

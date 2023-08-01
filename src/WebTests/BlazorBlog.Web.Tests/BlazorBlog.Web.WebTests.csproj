@@ -25,7 +25,6 @@
 
 	<ItemGroup>
 		<Content Include="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
-		<Folder Include="Properties\" />
 	</ItemGroup>
 
 	<ItemGroup>

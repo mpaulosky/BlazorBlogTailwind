@@ -10,12 +10,15 @@
 namespace BlazorBlog.Web.WebTests.Pages;
 
 [ExcludeFromCodeCoverage]
-public class IndexTests : UnitTestBase, IClassFixture<PlaywrightWebApplicationFactory<AssemblyClassLocator>>
+public class IndexTests : IClassFixture<PlaywrightWebApplicationFactory>
 {
-	public IndexTests(PlaywrightWebApplicationFactory<AssemblyClassLocator> webApplication,
-		ITestOutputHelper outputHelper) :
-		base(webApplication, outputHelper)
+	private readonly PlaywrightWebApplicationFactory _webApp;
+	private readonly ITestOutputHelper _outputHelper;
+
+	public IndexTests(PlaywrightWebApplicationFactory webapp, ITestOutputHelper outputHelper)
 	{
+		_webApp = webapp;
+		_outputHelper = outputHelper;
 	}
 
 	[Fact]
@@ -24,9 +27,10 @@ public class IndexTests : UnitTestBase, IClassFixture<PlaywrightWebApplicationFa
 		const string expectedZipFileName = $"{nameof(CanSaveTrace)}.zip";
 		const string expectedPageTitle = "Home";
 
-		IPage page = await _webApplication.CreatePlaywrightPageAsync();
+		IPage page = await _webApp.CreatePlaywrightPageAsync();
+
 		await using PlaywrightTrace trace = await page.TraceAsync(
-			$"Testing Tracing on {_webApplication.BrowserType}",
+			$"Testing Tracing on chrome",
 			true,
 			true,
 			true);
@@ -48,7 +52,7 @@ public class IndexTests : UnitTestBase, IClassFixture<PlaywrightWebApplicationFa
 	{
 		const string expectedPageTitle = "Home";
 
-		IPage page = await _webApplication.CreatePlaywrightPageAsync();
+		IPage page = await _webApp.CreatePlaywrightPageAsync();
 
 		await page.GotoAsync("/");
 
@@ -70,7 +74,7 @@ public class IndexTests : UnitTestBase, IClassFixture<PlaywrightWebApplicationFa
 	{
 		const string expectedPageTitle = "Not found";
 
-		IPage page = await _webApplication.CreatePlaywrightPageAsync();
+		IPage page = await _webApp.CreatePlaywrightPageAsync();
 
 		await page.GotoAsync("/Unknown");
 
@@ -89,14 +93,14 @@ public class IndexTests : UnitTestBase, IClassFixture<PlaywrightWebApplicationFa
 	{
 		const string expectedPageTitle = "Not found";
 
-		IPage page = await _webApplication.CreatePlaywrightPageAsync();
+		IPage page = await _webApp.CreatePlaywrightPageAsync();
 
 		_ = await page.GotoAsync("/BadRequest");
 
 		await page.GetByText("Sorry, there's nothing at this address.")
 			.WaitForAsync(new LocatorWaitForOptions { Timeout = 2500 });
 
-		IHostEnvironment hostEnv = _webApplication.Server.Services.GetRequiredService<IHostEnvironment>();
+		IHostEnvironment hostEnv = _webApp.Server.Services.GetRequiredService<IHostEnvironment>();
 		_outputHelper.WriteLine("Host Environment {0}", hostEnv.EnvironmentName);
 
 		if (hostEnv.IsDevelopment())

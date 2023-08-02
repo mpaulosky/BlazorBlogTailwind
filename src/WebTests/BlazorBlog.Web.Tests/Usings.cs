@@ -11,6 +11,7 @@ global using System.Collections.Concurrent;
 global using System.Diagnostics.CodeAnalysis;
 global using System.Runtime.CompilerServices;
 
+global using BlazorBlog.Common;
 global using BlazorBlog.Web.WebTests.Fixtures;
 global using BlazorBlog.Web.WebTests.Utilities;
 
